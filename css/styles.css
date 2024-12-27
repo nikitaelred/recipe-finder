@@ -1,0 +1,580 @@
+
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Urbanist', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #181A20;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+header {
+    background-color: #F6B100;
+}
+
+.header-mobile{
+    display: none;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    height: 121px;
+}
+
+header .logo {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+header .logo span {
+    color: #181A20;
+    font-weight: 500;
+}
+
+header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header .nav ul li {
+    display: inline;
+}
+
+.sec-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.healthy-recipes h2 {
+    margin-top: 65px;
+    margin-bottom: 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+span.subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #F6B100;
+}
+
+.recipe-cards {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row;
+    margin-top: 110px;
+    /* margin-bottom: 52px; */
+}
+
+.card {
+    width: 168px;
+    height: 182px;
+    background-color: #ffffff;
+    display: flex
+;
+    padding: 16px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    border-radius: 70px 70px 20px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px 0px #00000040;
+    position: relative;
+}
+
+img.card-img {
+    position: absolute;
+    top: -81px;
+    width: 145%;
+    left: -34px;
+}
+.card-cont {
+    margin-top: 105px;
+    text-align: left;
+    width: 100%;
+    display: flex
+;
+    flex-direction: row;
+    /* align-content: center; */
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.card-cont p {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.card span {
+    color: #9F9F9F;
+    font-size: 14px;
+    font-weight: 500;
+}
+span.rating {
+    background: #f6b100;
+    /* padding: 5px; */
+    border-radius: 50px;
+    color: #fff;
+    font-size: 8px;
+    width: 30px;
+    display: flex
+;
+    height: 16px;
+    /* line-height: 16px; */
+    font-weight: 600;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.see-all {
+    color: #9F9F9F;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+.mob-show{
+    display: none;
+}
+section.with-benefits {
+    display: flex
+;
+}
+
+section.with-benefits .sec-heading h2 {
+    margin: 0px;
+}
+section.with-benefits .sec-heading {
+    margin-top: 52px;
+    margin-bottom: 30px;
+}
+.benefits-sec {
+    display: flex
+;
+    gap: 59px;
+    width: 100%;
+    align-items: stretch;
+}
+.benefits-list {
+    display: flex
+;
+    flex-direction: column;
+    gap: 28px;
+    /* width: 55%; */
+    /* padding-right: 56px; */
+    /* float: left; */
+    box-sizing: border-box;
+}
+
+.ads img{
+    width: 100%;
+}
+.add-2 {
+    position: relative;
+}
+.like-sec {
+    display: flex
+;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 69px;
+    padding: 0px 32px;
+    z-index: 1;
+}
+.like-sec img {
+    width: 36px;
+}
+button.start-cook {
+    width: 96px;
+    height: 33px;
+    border-radius: 10px;
+    border: none;
+    background: #F6B100;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Urbanist';
+    cursor: pointer;
+}
+.weekly-pick {
+    padding: 0px 32px;
+    position: absolute;
+    bottom: 40px;
+    color: #ffffff;
+}
+.weekly-pick h2 {
+    font-size: 28px;
+    margin: 0px;
+    font-weight: 600;
+}
+.weekly-pick p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.benefit-item {
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-radius: 10px;
+    display: flex
+;
+    box-shadow: 0px 4px 40px 0px #0000001A;
+    gap: 25px;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex
+;
+    gap: 25px;
+    align-items: center;
+    align-content: center;
+}
+
+.benefit-item span.rating {
+    border-radius: 7px;
+    color: #fff;
+    font-size: 12px;
+    width: 44px;
+    height: 21px;
+}
+.benefit-item p {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0px;
+}
+.benefit-item span {
+    font-weight: 500;
+    font-size: 14px;
+    color: #f6b100;
+    display: flex
+;
+    margin-top: 7px;
+    align-items: center;
+}
+img.add-1 {
+    border-radius: 20px;
+    width: 100%;
+    height: 303px;
+}
+img.add-2 {
+    border-radius: 20px;
+    box-shadow: 0px 5px 11px 0px #24363B33;
+    box-shadow: 0px 20px 20px 0px #24363B2B;
+    margin-top: 40px;
+    width: 100%;
+    height: 339px;
+}
+
+.benefit-item p span img{
+    margin-right: 8px;
+}
+
+.banner {
+    background-color: #F6B100;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.banner .btn {
+    background-color: #fff;
+    color: #F6B100;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+
+section.comments {
+    margin-top: 52px;
+}
+
+.pick-card {
+    background-color: #e5e5e5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.profile {
+    display: flex
+;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+.prof-name {
+    display: flex
+;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 26px;
+}
+.prof-name p {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0px;
+}
+.comment > p {
+    margin: 0px 0px 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+section.comments h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.like-comment {
+    display: flex
+;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    color: #9F9F9F;
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+.likecount {
+    display: flex
+;
+    align-items: center;
+    gap: 8px;
+}
+.comment:last-child {
+    margin-bottom: 50px;
+}
+
+.comment {
+    border-bottom: 1px solid #F5F5F5;
+    margin-bottom: 15px;
+}
+.comments-heading {
+    display: flex
+;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.comments-heading img{
+    cursor: pointer;
+}
+
+/* Hide the last two cards for tablets */
+@media (max-width: 1025px) {
+    .info {
+        display: flex
+    ;
+        gap: 18px;
+        align-items: center;
+        align-content: center;
+    }
+    .info > img {
+        width: 106px;
+        height: 78px;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+    .recipe-cards .card:nth-last-child(-n+2) {
+        display: none;
+    }
+    img.add-1,img.add-2 {
+        width: 100%;
+    }
+    img.add-1{
+        height: 178px;
+    }
+    img.add-2 {
+    height: 324px;
+        object-fit: cover;
+        margin-top: 24px;
+    }
+    .benefits-list {
+        gap: 22px;
+    }
+    .benefits-sec {
+        gap: 18px;
+    }
+    .benefit-item > img {
+        width: 106px;
+        height: 78px;
+    }
+    .benefit-item p {
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .benefit-item {
+        gap: 18px;
+        width: 344px;
+    }
+    .benefit-item p span img {
+        margin-right: 5px;
+        width: 12px;
+    }
+    .benefit-item span.rating {
+        display: none;
+    }
+}
+
+/* Hide the last three cards for mobile */
+@media (max-width: 700px) {
+    img.add-1 {
+        height: auto;
+        object-fit: cover;
+    }
+    .mob-hide{
+        display: none;
+    }
+    .mob-show{
+        display: block;
+    }
+    .recipe-cards .card:nth-last-child(-n+3) {
+        display: none;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    .benefits-sec {
+        flex-wrap: wrap;
+    }
+    .benefits-list {
+        gap: 22px;
+        width: 100%;
+    }
+    .benefit-item {
+        width: 100%;
+    }
+    .container {
+        padding: 36px 15px;
+        overflow-x: hidden;
+    }
+    .healthy-recipes h2 {
+        margin-top: 0px;
+    }
+    section.with-benefits .sec-heading {
+        margin-top: 8px;
+        margin-bottom: 30px;
+    }
+    section.comments {
+        margin-top: 0px;
+    }
+    section.comments h3 {
+        margin: 0px;
+    }
+
+    .header{
+        display: none;
+    }
+    .header-mobile{
+        display: block;
+    }
+    .nav-logo {
+        display: flex
+    ;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 0px;
+        align-content: center;
+    }
+    header .logo {
+        font-size: 26px;
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+    }
+    header .container {
+        display: block;
+        height: auto;
+        padding: 16px;
+    }
+    /* Search Box Styling */
+    .search-box {
+        display: flex
+;
+        align-items: stretch;
+        background-color: #fff;
+        border: unset;
+        border-radius: 5px;
+        padding: 8px;
+        margin-top: 16px;
+        width: 100%;
+        height: 40px;
+    }
+
+.search-icon {
+    color: #aaa;
+    font-size: 20px; /* Icon size */
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #aaa; /* Text color */
+}
+
+.search-box input::placeholder {
+    color: #aaa; /* Placeholder color */
+    font-weight: 400;
+    line-height: 8px;
+}
+
+}
+
+@media (max-width: 380px) {
+    .card {
+        width: 136px;
+        height: 164px;
+    }
+    img.card-img {
+        position: absolute;
+        top: -81px;
+        width: 145%;
+        left: -28px;
+    }
+}
