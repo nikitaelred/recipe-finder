@@ -11,9 +11,10 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 0 15px; 
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 102px;
 }
 
 header {
@@ -45,7 +46,7 @@ header .logo span {
 header .nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
@@ -78,7 +79,7 @@ span.subtitle {
 
 .recipe-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
     flex-direction: row;
     margin-top: 110px;
@@ -87,7 +88,7 @@ span.subtitle {
 
 .card {
     width: 168px;
-    height: 182px;
+    height: 193px;
     background-color: #ffffff;
     display: flex
 ;
@@ -106,7 +107,7 @@ img.card-img {
     position: absolute;
     top: -81px;
     width: 145%;
-    left: -34px;
+    left: -40px;
 }
 .card-cont {
     margin-top: 105px;
@@ -133,16 +134,17 @@ img.card-img {
 span.rating {
     background: #f6b100;
     /* padding: 5px; */
+    font-family: 'poppins';
     border-radius: 50px;
     color: #fff;
     font-size: 8px;
     width: 30px;
-    display: flex
-;
+    display: flex;
     height: 16px;
-    /* line-height: 16px; */
+    gap: 1px;
+    line-height: 16px;
     font-weight: 600;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
@@ -239,8 +241,9 @@ button.start-cook {
     margin-bottom: 0px;
 }
 .benefit-item {
+    width: 530px;
     background-color: #f9f9f9;
-    padding: 8px;
+    padding: 8px 30px 8px 8px;
     border-radius: 10px;
     display: flex
 ;
@@ -264,8 +267,10 @@ button.start-cook {
     border-radius: 7px;
     color: #fff;
     font-size: 12px;
+    line-height: 21px;
     width: 44px;
     height: 21px;
+    gap: 5px;
 }
 .benefit-item p {
     font-weight: 700;
@@ -379,6 +384,7 @@ section.comments h3 {
 }
 .comment:last-child {
     margin-bottom: 50px;
+    border-bottom: none;
 }
 
 .comment {
@@ -398,13 +404,53 @@ section.comments h3 {
 .comments-heading img{
     cursor: pointer;
 }
+.mob-img{
+    display: none;
+}
+.add-1 {
+    position: relative;
+}
+.add-1 button {
+    position: absolute;
+    left: 46px;
+    bottom: 59px;
+    background: #ffffff;
+    border: none;
+    padding: 6px 42px;
+    color: #f6b100;
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+}
 
 /* Hide the last two cards for tablets */
 @media (max-width: 1025px) {
+    .add-1 button {
+        position: absolute;
+        left: 17px;
+        bottom: 22px;
+        background: #ffffff;
+        border: none;
+        padding: 2px 22px;
+        color: #f6b100;
+        cursor: pointer;
+        font-size: 14px;
+        font-family: 'Poppins';
+        font-weight: 500;
+        border-radius: 50px;
+    }
+    .desk-img{
+        display: none;
+    }
+    .mob-img{
+        display: block;
+    }
     .info {
         display: flex
-    ;
-        gap: 18px;
+;
+        gap: 12px;
         align-items: center;
         align-content: center;
     }
@@ -415,7 +461,7 @@ section.comments h3 {
     .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 50px;
+        padding: 0 65px;
     }
     .recipe-cards .card:nth-last-child(-n+2) {
         display: none;
@@ -436,6 +482,7 @@ section.comments h3 {
     }
     .benefits-sec {
         gap: 18px;
+        justify-content: space-between;
     }
     .benefit-item > img {
         width: 106px;
@@ -448,6 +495,8 @@ section.comments h3 {
     .benefit-item {
         gap: 18px;
         width: 344px;
+        height: 115px;
+        padding: 19px 8px 19px 19px;
     }
     .benefit-item p span img {
         margin-right: 5px;
@@ -456,10 +505,50 @@ section.comments h3 {
     .benefit-item span.rating {
         display: none;
     }
+    .benefit-item:nth-last-child(2) {
+        display: none; /* Hides the second-to-last item */
+      }
 }
 
 /* Hide the last three cards for mobile */
 @media (max-width: 700px) {
+    .add-1 button {
+        position: absolute;
+        left: 26px;
+        bottom: 22px;
+        background: #ffffff;
+        border: none;
+        padding: 6px 30px;
+        color: #f6b100;
+        cursor: pointer;
+        font-size: 12px;
+        font-family: 'Poppins';
+        font-weight: 500;
+        border-radius: 50px;
+    }
+    .card {
+        width: 47%;
+        height: 198px;
+    }
+    img.card-img {
+        position: absolute;
+        top: -121px;
+        width: 155%;
+        left: -54px;
+    }
+    section.comments .container {
+        padding-top: 0px;
+    }
+    .comments-heading {
+        border-top: 1px solid #EEEEEE;
+        padding-top: 23px;
+    }
+    .benefit-item:nth-last-child(2) {
+        display: none; /* Hides the second-to-last item */
+      }
+    .nav-logo img {
+        position: absolute;
+    }
     img.add-1 {
         height: auto;
         object-fit: cover;
@@ -485,6 +574,8 @@ section.comments h3 {
     }
     .benefit-item {
         width: 100%;
+        height: 88px;
+        padding: 8px 8px 8px 8px;
     }
     .container {
         padding: 36px 15px;
@@ -564,17 +655,77 @@ section.comments h3 {
     line-height: 8px;
 }
 
+section.healthy-recipes .container {
+    padding-bottom: 32px;
+}
+section.with-benefits .container {
+    padding-top: 0px;
+}
+.like-sec {
+    display: flex
+;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    padding: 0px 32px;
+    z-index: 1;
+}
+.weekly-pick {
+    padding: 0px 32px;
+    position: absolute;
+    bottom: 28px;
+    color: #ffffff;
+}
+.prof-name img {
+    width: 48px;
+}
+.prof-name {
+    gap: 16px;
+}
+.prof-name p {
+    font-size: 15px;
+}
+.comment > p {
+    font-size: 13px;
+}
+.like-comment {
+    gap: 15px;
+    font-size: 12px;
+}
+.profile {
+    margin-bottom: 8px;
+}
+.info > img {
+    width: 96px;
+    height: 72px;
+    /* object-fit: cover; */
 }
 
-@media (max-width: 380px) {
+}
+@media (max-width: 400px) {
     .card {
-        width: 136px;
-        height: 164px;
+        width: 47%;
+        height: 173px;
     }
     img.card-img {
         position: absolute;
-        top: -81px;
-        width: 145%;
-        left: -28px;
+        top: -116px;
+        width: 155%;
+        left: -48px;
     }
 }
+
+@media (max-width: 370px) {
+img.card-img {
+    position: absolute;
+    top: -105px;
+    width: 155%;
+    left: -39px;
+}
+}
+
+
