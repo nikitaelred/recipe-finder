@@ -142,12 +142,22 @@ span.rating {
     display: flex;
     height: 16px;
     gap: 1px;
-    line-height: 16px;
     font-weight: 600;
     justify-content: center;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
+}
+span.rating img {
+    margin-top: -1px;
+}
+span.inner {
+    color: #ffffff;
+    font-size: 8px;
+    align-self: center;
+    font-weight: 600;
+    line-height: 12px;
+    margin-top: 1px;
 }
 
 .see-all {
@@ -267,7 +277,7 @@ button.start-cook {
     border-radius: 7px;
     color: #fff;
     font-size: 12px;
-    line-height: 21px;
+    line-height: 19px;
     width: 44px;
     height: 21px;
     gap: 5px;
@@ -704,6 +714,15 @@ section.with-benefits .container {
     height: 72px;
     /* object-fit: cover; */
 }
+.like-comment {
+    margin-bottom: 8px;
+}
+.comment > p {
+    margin: 0px 0px 8px;
+}
+section.comments h3 {
+    font-size: 22px;
+}
 
 }
 @media (max-width: 400px) {
@@ -717,6 +736,7 @@ section.with-benefits .container {
         width: 155%;
         left: -48px;
     }
+    
 }
 
 @media (max-width: 370px) {
